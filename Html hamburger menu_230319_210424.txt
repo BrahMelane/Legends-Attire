@@ -1,0 +1,12 @@
+<header>
+  <h1>My Website</h1>
+  <nav>
+    <input type="checkbox" id="nav-toggle" />
+    <label for="nav-toggle" class="menu-icon">&#9776;</label>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+</header>
