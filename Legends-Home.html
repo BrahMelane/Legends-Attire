@@ -372,6 +372,21 @@ form input, select{
       height: 400px;
       width: 300px;
     }
+    .morebtn{
+      display: inline-block;
+		padding: 12px 24px;
+		border-radius: 4px;
+		background-color: #007bff;
+		color: #fff;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: bold;
+		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+		transition: background-color 0.2s ease-in-out;
+    }
+    .morebtn:hover {
+		background-color: #0062cc;
+	}
     </style>
     </head>
     <body>
@@ -534,6 +549,8 @@ form input, select{
                 setTimeout(showSlides, 2000); // Change image every 2 seconds
               }
             </script>
+            <div class="bottom-space"></div>
+           <a class="morebtn" href="Gallery.html"><u>More Products</u></a>
           
             <div class="gallery-wrap">
               <div class="item item-1"></div>
