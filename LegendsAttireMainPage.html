@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Legends Attire</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="preconnect" href="http://fonts.gooleapis.com">
+    <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.gooleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            list-style: none;
+            text-decoration: none;
+            scroll-behavior: smooth;
+        }
+        header{
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 33px 9%;
+            background: transparent;
+        }
+     
+        .logo{
+            font-size: 30px;
+            font-weight: 700;
+            color: white;
+        }
+        .navlist{
+            display: flex;
+        }
+        .navlist a{
+            color: white;
+            margin-left: 60px;
+            font-size: 15px;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: all .55s ease;
+        }
+        .navlist a:hover{
+            border-bottom: 2px solid white;
+        }
+        #menu-icon{
+            color: #154c79;
+            font-size: 35px;
+            z-index: 10001;
+            cursor: pointer;
+            display: none;
+        }
+        
+        section{
+            padding: 0 19%;
+        }
+        .hero-text h5{
+            font-size: 14px;
+            font-weight: 400;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .hero-text h1{
+            font-family: 'Permanent Marker';
+            font-size: 90px;
+            line-height: 1;
+            color: white;
+            margin: 0 0 45px;
+        }
+        .hero-text h4{
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .hero-text p{
+            color: white;
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 40px;
+        }
+        .hero-img img{
+            width: 700px;
+            height: auto;
+        }
+        .hero-text a{
+            display: inline-block;
+            color: white;
+            background: #154c79;
+            border: 1px solid transparent;
+            padding: 12px 30px;
+            line-height: 1.4;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 30px;
+            text-transform: uppercase;
+            transition: all .55s ease;
+        }
+        .hero-text a:hover{
+            background: transparent;
+            border: 1px solid white;
+            transform: translateX(8px);
+        }
+        .hero-text a.ctaa{
+            background: transparent;
+            border: 1px solid white;
+            margin-left: px;
+        }
+        .hero-text a.ctaa i{
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        .icons{
+            position:absolute;
+            top: 50%;
+            padding: 0 9%;
+            transform: translateY(-50%);
+        }
+        .icons i{
+            display: block;
+            margin: 26px 0;
+            font-size: 24px;
+            color: white;
+            transition: all .50s ease;
+        }
+        .icons i:hover{
+            color: #154c79;
+            transform: translateY(-5px);
+        }
+        .scroll-down{
+            position: absolute;
+            bottom: 6%;
+            right: 9%;
+        }
+        .scroll-down i{
+            display: block;
+            padding: 12px;
+            font-size: 25px;
+            color: white;
+            background: #154c79;
+            border-radius: 30px;
+            transition: all .50s ease;
+        }
+        .scroll-down i:hover{
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 1535px){
+            header{
+                padding: 15px 3%;
+                transition: .2s;
+            }
+            .icons{
+                padding: 0 3%;
+                transition: .2s;
+            }
+            .scroll-down{
+                right: 3%;
+                transition: .2s;
+            }
+        }
+        @media (max-width: 1460px){
+            section{
+                padding: 0 12%;
+                transition:.2s;
+            }
+
+        }
+        @media (max-width: 1340px){
+            .hero-img img{
+                width: 100%;
+                height: auto;
+            }
+            .hero-text h1{
+                font-size: 75px;
+                margin: 0 0 30px;
+            }
+            .hero-text h5{
+                margin-bottom: 25px;
+            }
+        }
+        @media (max-width: 1195px){
+            section{
+                padding: 0 3%;
+                transition: .2s;
+            }
+            .hero-text{
+                padding-top: 115px;
+            }
+            .hero-img{
+                text-align: center;
+            }
+            .hero-img img{
+                width: 560px;
+                height: auto;
+            }
+            .hero{
+                height: 100%;
+                gap: 1rem;
+                grid-template-columns: 1fr;
+            }
+            .icons{
+                display: none;
+            }
+            .scroll-down{
+                display: none;
+            }
+        }
+        @media (max-width: 990px){
+            #menu-icon{
+                display: block;
+            }
+            .navlist{
+                position: absolute;
+                top: 100%;
+                right: -300px;
+                width: 300px;
+                height: 40vh;
+                background: #429E9D;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 50px 20px;
+                transition: all .55s ease;
+            }
+            .navlist a{
+                display: block;
+                margin: 7px 0;
+                margin-left: 0;
+            }
+            .navlist.open{
+                right: 0;
+            }
+        }
+        @media (max-width: 680px){
+            .hero-img img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        #btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: navy;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(-160px)
+    
+}
+    .bottom-space{
+            height: 50px;
+        }
+      footer{
+        background-color: #42788a;
+        padding: 0.5em 0;
+        height: 130px;
+        justify-content: center;
+        font-size: 15px;
+        text-align: center;
+    }
+    .sec{
+        position: relative;
+        padding: 100px;
+        
+    }
+    h2{
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #154c79;
+        padding: 100px;
+    }
+    .sec h2{
+        font-size: 3.5em;
+        margin-bottom: 10px;
+        color: #154c79;
+    }
+    .sec p{
+        font-size: 1.2em;
+        color: #154c79;
+        line-height: 30px;
+    }
+    button{
+        border-radius: 15px;
+        width: 75px;
+        font-family: 'Poppins', sans-serif;
+        background-color: lightgray;
+        color: #fff;
+        border: none;
+        
+    }
+    input{
+        border-radius: 5px;
+        width: 50px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        background-color: lightgray;
+        color: #fff;
+    }
+   /* .mm{
+        position: absolute;
+    
+    color: rgb(255, 255, 255);
+    white-space: nowrap;
+    font-size: 5.5vw;
+    z-index: 9;
+    transform: translateY(160px);
+    }*/
+    .mm{
+        color: rgb(255, 255, 255);
+    white-space: nowrap;
+    font-size: 5.5vw;
+   
+    transform: translateY(-160px);
+    }
+    .doc{
+            width: 110px;
+            color: white;
+            padding: 5px;
+            text-decoration: none;
+        }
+        .doc:hover{
+            color: black;
+        }
+    .social-icon{
+            width: 110px;
+            color: #154c79;
+            padding: 5px;
+            text-decoration: none;
+        }
+        .social-icon:hover{
+            color: black;
+        }
+        .Instagram:hover{
+            color: yellow;
+        }
+        .Instagram{
+            width: 110px;
+            color: #154c79;
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        .Twitter:hover{
+            color: blue;
+        }
+        .Twitter{
+            width: 110px;
+            color: #154c79;
+            padding: 5px;
+            text-decoration: none;
+        }
+        .Facebook:hover{
+            color: skyblue;
+        }
+        .Facebook{
+            width: 110px;
+            color: #154c79;
+            padding: 5px;
+            text-decoration: none;
+        }
+        .column{
+           justify-content: center;
+           align-content: center;
+           text-align: center;
+           color: navy;
+
+        }
+        .bottom-space{
+            height: 50px;
+        }
+        .box h2{
+            font-size: 2.5em;
+        margin-bottom: 0px;
+        color: #fff;
+        padding: 10px;
+        }
+        .top input,
+select,
+textarea {
+			background-color: #ccc;
+            color: black;
+            padding: 1.4rem;
+    background: transparent;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    border-radius: 5px;
+		
+			
+			padding: 20px;
+		}
+        .top input{
+            width: 300px;
+            text-align: left;
+        }
+
+		.container {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.box {
+			flex: 1;
+			background-color: #eee;
+			margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+			
+		}
+        .box input {
+            height: 25px;
+            border-radius: 5px;
+            text-align: center;
+            width: 100px;
+            border-color: grey;
+            border-style: none;
+        }
+        .box select{
+           margin: 0px;
+           border: none;
+           cursor: pointer;
+        }
+        textarea{
+    height: 6rem;
+    width: 300px;
+}
+.submit input{
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+    background: navy;
+    color: white;
+}
+form{
+    background-color: #fff;
+    padding: 20px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Legends Attire</a>
+
+        <ul class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Services">Service</a></li>
+            <li><a href="#Socials">Socials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">More</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+<section class="hero">
+          <div class="hero-text">
+              <h5></h5>
+              <h4></h4>
+              <h1></h1>
+              <p></p>
+              <a href="#Services"></a>
+              <a href="#" class="ctaa"><i class="ri-play-fill"></i></a>
+         </div>
+         <div class="hero-img">
+            <img src="">
+
+        </div>
+
+</section>
+<div class="icons">
+    <a href="#"><i class="ri-instagram-line"></i></a>
+    <a href="#"><i class="ri-twitter-line"></i></a>
+    <a href="#"><i class="ri-facebook-circle-line"></i></a>
+</div>
+<div class="scroll-down" >
+<a href="#Services"><i class="ri-arrow-down-s-fill"></i></a>
+</div>
+<script >
+    let menu = document.querySelector('#menu-icon');
+    let navlist = document.querySelector('.navlist');
+
+    menu.onclick = () => {
+        menu.classList.toggle('bx-x');
+        navlist.classList.toggle('open');
+    }
+
+    
+</script>
+
+
+
+<div>
+    <h2 id="Services">Services</h2>
+    
+    
+      
+    <form action=https://formspree.io/f/xknapwea method="post">
+        <div class="top">
+            
+            <input type="text" name="Name" placeholder="Full Name" required><br>
+        <input type="email" name="Email" placeholder="Email" required><br>
+        <input type="tel" name="Telephone" placeholder="Tel" required><br>
+        <select name="province" required>
+    <option>Gauteng</option>
+    <option>Western Cape</option>
+    <option>Eastern Cape</option>
+    <option>Northen Cape</option>
+    <option>North West</option>
+    <option>Limpopo</option>
+    <option>Kwazulu-Natal</option>
+    <option>Free State</option>
+    <option>Mpumalanga</option>
+        </select><br>
+        <textarea  name="Message" placeholder="Message"></textarea><br>
+        
+           
+      
+        
+        </div>
+        <div class="container">
+            <div class="box">
+                <h2>Main Room</h2>
+                
+                    <label for="dropdown1">Rooms:</label>
+                    <select id="dropdown1" name="Main Room">
+                        <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                    <br>
+                    <label for="result1">Amount:</label><br>
+                    <input type="text" id="result1" name="Main Room Amount" readonly>
+            </div>
+            <div class="box">
+                <h2>Guest Room</h2>
+                
+                <label for="dropdown2">Rooms:</label>
+            <select id="dropdown2" name="GuestRoom">
+                <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <br>
+            <label for="result2">Amount:</label><br>
+            <input type="text" id="result2" name="Guest Room Amount" readonly>
+            </div>
+            <div class="box">
+                <h2>Kiddies Room</h2>
+               
+                        <label for="dropdown3">Rooms:</label>
+                        <select id="dropdown3" name="Kiddies Room">
+                            <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                        <br>
+                        <label for="result3">Amount:</label><br>
+                        <input type="text" id="result3" name="Kiddies Room Amount" readonly>
+            </div>
+            <div class="box">
+                <h2>Garage</h2>
+                
+                        <label for="dropdown4">Garages:</label>
+                        <select id="dropdown4" name="Garage">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                        <br>
+                        <label for="result4">Amount:</label><br>
+                        <input type="text" id="result4" name="Garage Amount" readonly>
+            </div>
+        </div>
+        <div class="submit"><input type="submit" value="Submit"></div>
+       </form>
+       <script>
+        const dropdown1 = document.getElementById("dropdown1");
+        const dropdown2 = document.getElementById("dropdown2");
+        const dropdown3 = document.getElementById("dropdown3");
+        const dropdown4 = document.getElementById("dropdown4");
+        const result1 = document.getElementById("result1");
+        const result2 = document.getElementById("result2");
+        const result3 = document.getElementById("result3");
+        const result4 = document.getElementById("result4");
+      
+        dropdown1.addEventListener("change", () => {
+          const value1 = parseInt(dropdown1.value);
+          result1.value = value1 * 180;
+        });
+      
+        dropdown2.addEventListener("change", () => {
+          const value2 = parseInt(dropdown2.value);
+          result2.value = value2 * 120;
+        });
+    
+        dropdown3.addEventListener("change", () => {
+          const value3 = parseInt(dropdown3.value);
+          result3.value = value3 * 80;
+        });
+    
+        dropdown4.addEventListener("change", () => {
+          const value4 = parseInt(dropdown4.value);
+          result4.value = value4 * 100;
+        });
+      </script>
+      
+
+
+    <div class="sec" id="about">
+        <h2>Buti's Cleaning Service</h2>
+        <p>Looking for a reliable and efficient cleaning service? Look no further than our professional cleaning team!
+
+            We understand that life can get busy, and keeping up with the demands of everyday cleaning can be overwhelming. That's why we're here to help. Our cleaning service provides exceptional cleaning services for your home or business, ensuring that your space is always tidy, clean, and organized.
+            
+            Our team consists of trained and experienced cleaners who are dedicated to providing the highest level of service. We use only the best cleaning products and equipment to ensure that your space is thoroughly cleaned and sanitized. From deep cleaning to regular maintenance cleaning, we've got you covered.
+            
+            We offer flexible scheduling options to fit your needs and budget, so you can enjoy a clean and organized space without breaking the bank. Our goal is to exceed your expectations with our high-quality service, attention to detail, and excellent customer service.
+            
+            So why wait? Contact us today to schedule your cleaning service and experience the difference our professional cleaning team can make in your life. We look forward to hearing from you!
+
+            <br><br>
+             </p>
+
+    </div>
+<script>
+    let moon = document.getElementById('moon');
+let Logo2 = document.getElementById('Lago');
+let Backfinal = document.getElementById('back');
+let text = document.getElementById('text');
+let btn = document.getElementById('btn');
+let Frontfinal1 = document.getElementById('front');
+let header = document.querySelector('header');
+
+window.addEventListener('scroll', function(){
+let value = window.scrollY;
+moon.style.top = value * 1.05 + 'px';
+Lago.style.top = value * 1.05 + 'px';
+back.style.top = value * 0.4 + 'px';
+front.style.top = value * 0 + 'px';
+text.style.marginRight = value * 2 + 'px';
+/*text.style.marginTop = value * 1.5 + 'px';*/
+btn.style.marginTop = value * 1.5 + 'px';
+header.style.top = value * 0.5 + 'px';
+})
+</script>
+    <div class="bottom-space"></div>
+
+    <div class="column" >
+        <div class="Article column1">
+
+            <p id="contact"><b><u><i>Contact:</i></u></b><br>
+               Contact1: +27 79 944 1671<br>
+               Contact2: +27 67 112 2347<br>                 
+            </p>
+
+            <br>
+
+            <p id="Email">
+                <b><u><i>Email:</i></u></b><br>
+                FinessedWebs@gmail.com
+            </p>
+
+            
+        </div>
+
+        <div class="space">
+           
+        </div>
+
+        <div class="Article column2">
+
+            <p id="Socials">
+                <b><u><i>Socials:</i></u></b><br>
+                <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                
+                <a class="Instagram" href="https://instagram.com/finessedwebs"  target="_blank">Instagram <ion-icon name="logo-instagram"></ion-icon></a><br>
+                <a class="Twitter" href="https://twitter.com/finessedwebs"  target="_blank">Twitter<ion-icon name="logo-twitter"></ion-icon></a><br>
+                <a class="Facebook" href="https://facebook.com/finessedwebs"  target="_blank">Facebook<ion-icon name="logo-facebook"></ion-icon></a><br>
+                <a class="social-icon" href="https://tiktok.com/finessedwebs"  target="_blank">Tik Tok<ion-icon name="logo-tiktok"></ion-icon></a>
+            </p>
+
+        </div>
+
+        <div class="space"></div>
+
+        <div class="Article column3">
+            <p>
+                <b><u><i>Banking Details:</i></u></b><br>
+                Bank:Absa 01234568<br>
+                <b><u><i>Documents:</i></u></b><br>
+               Requirements: <a href="images/FinessedWebs Website Requirements.pdf" class="doc" download="Payment " target="_blank" title="Payment">Get Started</a><br>
+               Fees: <a href="images/Payment.pdf" class="doc" download="pdf" target="_blank">Payment</a>
+            </p>
+        </div>
+        <div class="space"></div>
+
+</div>
+<div class="bottom-space"></div>
+
+    <footer>
+      <p>&#169 Finessed Webs Website Design &#183 Tel: +27 67 112 2347 &#183 View our Social Media and don&#8217t forget to follow and like.
+      </p>
+      <p>Designed by FinessedWebs</p>
+    </footer>
+</div>
+</body>
+</html>
